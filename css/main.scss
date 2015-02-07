@@ -1,0 +1,221 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+
+// Imports
+	@import "mixins";
+
+
+// Variables
+	// Colors
+	$color-background: rgb(245, 245, 245);
+	$color-text: rgb(65, 65, 65);
+	$color-heading: rgb(50, 50, 50);
+
+	$color-card-background: rgb(255, 255, 255);
+	$color-card-border: rgb(225, 225, 225);
+
+	$color-code-background: $color-card-border;
+
+	$color-footer: rgb(125, 125, 125);
+
+	// Fonts
+	$font-heading: 'Lato', sans-serif;
+	$font-content: 'Open Sans', sans-serif;
+	$font-mono: 'Source Code Pro', sans-serif;
+
+	// Burger
+	$burger-thickness: 2px;
+	$burger-width: 30px;
+	$burger-height: 22px;
+	$burger-spacing: 8px;
+	$burger-color: gray;
+
+	@import "burger";
+
+
+// Reset
+	* {
+		margin: 0;
+		padding: 0;
+		font-size: 0;
+	}
+
+
+// Global
+	* { font-family: $font-content;	}
+
+	body {
+		background-color: $color-background;
+		/*transition*/
+		-webkit-transition: all .2s ease-in-out;
+		-moz-transition: all .2s ease-in-out;
+		-ms-transition: all .2s ease-in-out;
+		-o-transition: all .2s ease-in-out;
+		transition: all .2s ease-in-out;
+	}
+
+	h1, h2, h3, {
+		font-family: $font-heading;
+		margin-bottom: 8px;
+		color: $color-heading;
+	}
+
+	p, section {
+		font-family: $font-content;
+		color: $color-text;
+	}
+
+	footer { color: $color-footer; }
+
+	h1 { font-size: 36px; }
+	h2 { font-size: 24px; }
+	h3 { font-size: 18px; }
+
+	p {
+		font-size: 16px;
+		white-space: pre-line;
+	}
+
+	a, span, pre, blockquote {
+		font-family: inherit;
+		font-size: inherit;
+		color: inherit;
+	}
+
+	code {
+		font-size: inherit;
+		color: inherit;
+	}
+
+	a {
+		&, &:active, &:visited {
+			text-decoration: none;
+			font-weight: bold;
+		}
+	}
+
+	.pipe {
+		margin: auto;
+		width: 96%;
+		max-width: 400px;
+	}
+
+
+// Style
+html {
+	position: relative;
+}
+
+canvas {
+	position: absolute;
+	z-index: -100;
+
+	width: 100%;
+	height: 100%;
+}
+
+code {
+	padding: 2px 4px;
+	border-radius: 2px;
+
+	font-family: $font-mono;
+	background-color: $color-code-background;
+}
+
+body > header {
+	text-align: center;
+	height: auto;
+	width: 100%;
+}
+
+header > .wrapper {
+	position: relative;
+	display: inline-block;
+}
+
+#logo {
+	width: 92px;
+	height: 92px;
+
+	margin: 32px auto;
+	/*transition*/
+		-webkit-transition: all .2s ease-in-out;
+		-moz-transition: all .2s ease-in-out;
+		-ms-transition: all .2s ease-in-out;
+		-o-transition: all .2s ease-in-out;
+		transition: all .2s ease-in-out;
+
+	background: url('/assets/img/logo.png') no-repeat center;
+	background-size: auto;
+
+	@media (-webkit-min-device-pixel-ratio: 2) { 
+		background: url('/assets/img/logo@2x.png') no-repeat center;
+		background-size: 70%;
+	}
+
+	a {
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+#burger {
+	display: block;
+
+	position: absolute;
+	top: 40%;
+	right: 16px;
+}
+
+.card {
+	padding: 16px;
+	margin-bottom: 8px;
+
+	border-radius: 4px;
+	border: 1px solid $color-card-border;
+	background-color: $color-card-background;
+
+	p > a {
+		&, &:active, &:visited {
+			text-decoration: underline;
+			font-weight: bold;
+		}
+	}
+}
+
+.section-title {
+	margin-top: 16px;
+	margin-bottom: 8px;
+	margin-left: 16px;
+}
+
+footer {
+	text-align: center;
+}
+
+.links {
+	margin-top: 32px;
+	list-style: none;
+	
+	li {
+		display: inline-block;
+		margin-right: 16px;
+
+		a {
+			font-size: 14px;
+			font-weight: normal;
+		}
+	}
+}
+
+.copy {
+	margin-top: 8px;
+	margin-bottom: 32px;
+
+	font-size: 14px;
+	color: inherit;
+}

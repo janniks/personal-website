@@ -1,0 +1,21 @@
+<footer class="pipe">
+	<ul class="links">
+		<li>
+			<a href="{{ site.url }}">Home</a>
+		</li>
+		<li>
+			<a href="{{ site.url | append: "/blog" }}">Blog</a>
+		</li>
+		{% if site.dribbble_username %}
+		<li>
+			<a href="{{ "https://dribbble.com/" | append: site.dribbble_username }}" target="_blank">Dribbble</a>
+		</li>
+		{% endif %}
+		{% if site.github_username %}
+		<li>
+			<a href="{{ "https://github.com/" | append: site.github_username }}" target="_blank">GitHub</a>
+		</li>
+		{% endif %}
+	</ul>
+	<section class="copy">&copy; Jannik Siebert {{ site.time | date: '%Y' }}</section>
+</footer>

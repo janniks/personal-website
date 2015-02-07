@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	{% include head.html %}
+
+	<body>
+		{% include header.html %}
+
+		<div class="content pipe">
+			<h3 class="section-title">Posts</h3>
+			<section class="posts">
+				{{ content }}
+			</section>
+		</div>
+
+		{% include footer.html %}
+	</body>
+</html>

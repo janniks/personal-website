@@ -1,0 +1,125 @@
+/*  BURGER STYLING  */
+#burger {
+  width: 30px;
+  height: 22px; }
+  #burger span {
+    width: 30px;
+    height: 2px;
+    display: block;
+    background: gray;
+    margin: 0 0 8px 0;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out; }
+  #burger span:last-child {
+    margin: 0; }
+  #burger.open span:nth-of-type(1) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin: 10px 0 0 0; }
+  #burger.open span:nth-of-type(2) {
+    opacity: 0; }
+  #burger.open span:nth-of-type(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    margin: -12px 0 0 0; }
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 0; }
+
+* {
+  font-family: "Open Sans", sans-serif; }
+
+body {
+  background-color: whitesmoke; }
+
+h1, h2, h3 {
+  font-family: "Lato", sans-serif;
+  margin-bottom: 8px;
+  color: #323232; }
+
+p, section {
+  font-family: "Open Sans", sans-serif;
+  color: #414141; }
+
+footer {
+  color: #7d7d7d; }
+
+h1 {
+  font-size: 36px; }
+
+h2 {
+  font-size: 24px; }
+
+h3 {
+  font-size: 18px; }
+
+p {
+  font-size: 16px;
+  white-space: pre-line; }
+
+a, span {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit; }
+
+a, a:active, a:visited {
+  text-decoration: none;
+  font-weight: bold; }
+
+.pipe {
+  margin: auto;
+  width: 50%; }
+
+body > header {
+  position: relative; }
+
+.logo {
+  width: 92px;
+  height: 92px;
+  margin: 32px auto;
+  background-color: gray; }
+
+#burger {
+  display: block;
+  position: absolute;
+  top: 40%;
+  right: 0; }
+
+.card {
+  padding: 16px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  border: 1px solid #e1e1e1;
+  background-color: white; }
+
+.section-title {
+  margin-top: 16px;
+  margin-bottom: 8px;
+  margin-left: 16px; }
+
+footer {
+  text-align: center; }
+
+.links {
+  margin-top: 32px;
+  list-style: none; }
+  .links li {
+    display: inline-block;
+    margin-right: 16px; }
+    .links li a {
+      font-size: 14px;
+      font-weight: normal; }
+
+.copy {
+  margin-top: 8px;
+  margin-bottom: 32px;
+  font-size: 14px;
+  color: inherit; }

@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<article class="card">
+	<header>
+		<h1>Hi, my name is Jannik</h1>
+		<h2>I love <span class="love">Web Design</span></h2>
+	</header>
+	<section class="content">
+		<p>Let's work together!
+			Say Hi back, at <a href="mailto:hi@janniks.com?subject=Hi%20Jannik">hi@janniks.com</a></p>
+	</section>
+</article>
+
+<h3 class="section-title">Posts</h3>
+<section class="posts">
+	{% for post in site.posts limit:3 %}
+	<article class="card">
+		<header>
+			<h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+		</header>
+		<section class="content">
+			{{ post.excerpt }}
+		</section>
+	</article>
+	{% endfor %}
+</section>
