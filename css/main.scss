@@ -5,6 +5,7 @@
 
 
 // Imports
+	@import "bourbon/bourbon";
 	@import "mixins";
 
 
@@ -34,6 +35,13 @@
 	$burger-color: gray;
 
 	@import "burger";
+
+	// Headline
+	$headline-color-1: #aebcb9; // Tower Gray
+	$headline-color-2: #0096a7; // Bondi Blue
+	$headline-color-3: #0d0d0d; // Cod Gray
+
+	@import "headline";
 
 
 // Reset
@@ -79,7 +87,7 @@
 		white-space: pre-line;
 	}
 
-	a, span, pre, blockquote {
+	a, span, pre, blockquote, b {
 		font-family: inherit;
 		font-size: inherit;
 		color: inherit;

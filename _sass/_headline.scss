@@ -1,0 +1,102 @@
+/* -------------------------------- 
+
+headline mixins - codyhouse
+
+-------------------------------- */
+
+@mixin center($xy:xy) {
+  @if $xy == xy {
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    @include transform(translateX(-50%) translateY(-50%));
+  }
+  @else if $xy == x {
+    left: 50%;
+    right: auto;
+    @include transform(translateX(-50%));
+  }
+  @else if $xy == y {
+    top: 50%;
+    bottom: auto;
+    @include transform(translateY(-50%));
+  }
+}
+
+
+/* -------------------------------- 
+
+xtype - codyhouse
+
+-------------------------------- */
+
+.cd-headline.type {
+	
+	.cd-words-wrapper {
+		vertical-align: top;
+		overflow: hidden;
+
+		&::after {
+			/* vertical bar */
+			content: '';
+			position: absolute;
+			right: 0;
+			@include center(y);
+			height: 90%;
+			width: 1px;
+			background-color: $headline-color-1;
+		}
+
+		&.waiting::after {
+			@include animation(cd-pulse 1s infinite);
+		} 
+
+		&.selected {
+			background-color: $headline-color-1;
+
+			&::after {
+				visibility: hidden;
+			}
+
+			b {
+				color: $headline-color-3;
+			}
+		}
+	}
+
+	b {
+		visibility: hidden;
+
+		&.is-visible {
+			visibility: visible;
+		}
+	}
+
+	i {
+		position: absolute;
+		visibility: hidden;
+
+		&.in {
+			position: relative;
+			visibility: visible;
+		}
+	}
+}
+
+@include keyframes(cd-pulse) {
+	0% {
+		@include transform(translateY(-50%) scale(1));
+		opacity: 1;
+	}
+
+	40% {
+		@include transform(translateY(-50%) scale(0.9));
+		opacity: 0;
+	}
+
+	100% {
+		@include transform(translateY(-50%) scale(0));
+		opacity: 0;
+	}
+}
