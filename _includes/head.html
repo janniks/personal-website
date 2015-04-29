@@ -5,8 +5,8 @@
 	<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 	<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
-	<link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+	<link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.github_baseurl }}">
+	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.github_baseurl | prepend: site.github_url }}">
 
 	<!-- FONTS -->
 	<link href='http://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
@@ -14,9 +14,9 @@
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
 
 	<!-- SCRIPTS -->
-	<script src="{{ "/assets/js/jquery.min.js" | prepend: site.baseurl | prepend: site.url }}"></script>
-	<script src="{{ "/assets/js/jquery.particleground.min.js" | prepend: site.baseurl | prepend: site.url }}"></script>
-	<script src="{{ "/assets/js/headline.js" | prepend: site.baseurl | prepend: site.url }}"></script>
+	<script src="{{ "/assets/js/jquery.min.js" | prepend: site.github_baseurl | prepend: site.github_url }}"></script>
+	<script src="{{ "/assets/js/jquery.particleground.min.js" | prepend: site.github_baseurl | prepend: site.github_url }}"></script>
+	<script src="{{ "/assets/js/headline.js" | prepend: site.github_baseurl | prepend: site.github_url }}"></script>
 
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -26,7 +26,6 @@
 
 		ga('create', 'UA-60744714-1', 'auto');
 		ga('send', 'pageview');
-
 	</script>
 	
 	<script>
