@@ -8,6 +8,7 @@ description: > # this means to ignore newlines until "baseurl:"
 github_baseurl: "/personal-website" # the subpath of your site, e.g. /blog/
 github_url: "http://janniks.github.io" # the base hostname & protocol for your site
 url: "http://janniks.com" # CNAME
+
 # Usernames
 twitter_username:  jannikscript
 github_username:   janniks
