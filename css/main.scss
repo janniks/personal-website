@@ -157,11 +157,11 @@ header > .wrapper {
 		-o-transition: all .2s ease-in-out;
 		transition: all .2s ease-in-out;
 
-	background: url('/assets/img/logo.png') no-repeat center;
+	background: url('{{ "/assets/img/logo.png" | prepend: site.github_baseurl | prepend: site.github_url }}') no-repeat center;
 	background-size: auto;
 
 	@media (-webkit-min-device-pixel-ratio: 2) { 
-		background: url('/assets/img/logo@2x.png') no-repeat center;
+		background: url('{{ "/assets/img/logo@2x.png" | prepend: site.github_baseurl | prepend: site.github_url }}') no-repeat center;
 		background-size: 70%;
 	}
 
