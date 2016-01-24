@@ -8,5 +8,26 @@
 			<span></span>
 			<span></span>
 		</a>
+		<nav class="menu">
+			<div class="magic">
+				Start the magic!
+				
+				<div class="checkbox-wrapper">
+					<input type="checkbox" name="checkbox-toggle" id="checkbox-toggle">
+					<label for="checkbox-toggle"></label>
+				</div>
+			</div>
+		</nav>
 	</div>
 </header>
+
+<script>
+	$('#checkbox-toggle').change(function() {
+		var $this = $(this); 
+		if ($this.is(':checked')) {
+			$('#particle-canvas').particleground('start');
+		} else {
+			$('#particle-canvas').particleground('pause');
+		}
+	});
+</script>

@@ -29,14 +29,13 @@
 	</script>
 	
 	<script>
-		// Toggle menu
 		$(function() {
-			var burger 		= $('#burger');
-			var	menu 		= $('div.menu');
+			var burger = $('#burger');
+			var	menu = $('nav.menu');
 
 			$(burger).on('click', function(e) {
 				e.preventDefault();
-				// menu.slideToggle();
+				menu.slideToggle();
 				burger.toggleClass('open');
 			});
 		});
@@ -57,6 +56,17 @@
 				dotColor: '#ddd',
 				lineColor: '#ddd'
 			});
+			$('#particle-canvas').particleground('pause');
+
+			$(window).resize(function() {
+				$('#particle-canvas').particleground('start');
+				$('#particle-canvas').particleground('pause');
+				$('#checkbox-toggle').prop('checked', false);
+			});
+
+			if (window.location.href == "http://janniks.com/") {
+				$('nav.menu').slideToggle();
+			}
 		});
 	</script>
 </head>
